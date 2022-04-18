@@ -1,9 +1,8 @@
-const fetch = require('node-fetch');
+const axios = require('axios');
 
 async function apiRequest(url) {
-    const response = await fetch(url);
-    const json = await response.json();
-    return json;
+    const response = await axios.get(url);
+    return response.data;
 }
 
 module.exports = apiRequest;
