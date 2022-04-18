@@ -1,0 +1,23 @@
+{
+  "name": "sample.javascript.twitchchatbot",
+  "version": "1.0.0",
+  "description": "<img src=\"https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg\" />",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiocabral/Sample.JavaScript.TwitchChatBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiocabral/Sample.JavaScript.TwitchChatBot/issues"
+  },
+  "homepage": "https://github.com/sergiocabral/Sample.JavaScript.TwitchChatBot#readme",
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  }
+}
