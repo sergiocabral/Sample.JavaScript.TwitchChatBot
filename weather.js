@@ -1,10 +1,10 @@
-const apiRequest = require('./apiRequest');
+import api from './apiRequest.js';
 
 const apiKey = 'f7e0804703cd9cb0c3f9987d78e2a7ca';
 
 async function getCity(city) {
     const limit = 1;
-    const results = await apiRequest(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${apiKey}`);
+    const results = await api.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=${limit}&appid=${apiKey}`);
     return results?.length > 0 ? {
         description: `${results[0].name}, ${results[0].country}`,
         lat: results[0].lat,
@@ -15,7 +15,7 @@ async function getCity(city) {
 async function getWeather(lat, lon) {
     const lang = "pt_br";
     const units = "metric";
-    const result = await apiRequest(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=${lang}&units=${units}&appid=${apiKey}`);
+    const result = await api.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=${lang}&units=${units}&appid=${apiKey}`);
     return result?.weather?.length > 0 ? {
         description: result.weather[0].description,
         temperature: result.main.temp,
@@ -34,4 +34,4 @@ async function weather(city) {
     return `Temperatura de ${geoWeather.temperature}º, ${geoWeather.description}, em ${cityData.description}.`;
 }
 
-module.exports = weather;
+export default weather;

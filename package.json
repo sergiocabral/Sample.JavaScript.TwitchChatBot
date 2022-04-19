@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "<img src=\"https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg\" />",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },

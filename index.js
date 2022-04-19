@@ -1,5 +1,5 @@
-const tmi = require('tmi.js');
-const weather = require('./weather');
+import tmi from 'tmi.js';
+import weather from './weather.js';
 
 // Define configuration options
 const opts = {
